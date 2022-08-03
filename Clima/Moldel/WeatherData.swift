@@ -1,23 +1,15 @@
-//
-//  WeatherData.swift
-//  Clima
-//
-//  Created by Alexander Shabalin on 2/8/22.
-//  Copyright © 2022 App Brewery. All rights reserved.
-//
-
 import Foundation
 
-struct WeatherData: Decodable {
+struct WeatherData: Codable {
     let name: String
     let main: Main
     let weather: [Weather]
 }
 
-struct Main: Decodable {
+struct Main: Codable {
     let temp: Double
 }
 
-struct Weather: Decodable {
-    let description: String
+struct Weather: Codable {
+    let id: Int
 }
